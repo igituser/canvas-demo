@@ -1,0 +1,21 @@
+*{
+    margin:0;
+}
+
+.actions.x #brush{
+    display:inline-block;
+}
+
+.actions.x #eraser{
+    display:none;
+}
+
+.actions #brush{
+    display:none;
+}
+
+.actions #eraser{
+    display:inline-block;
+}
+
+
