@@ -8,12 +8,38 @@ listenToUser();
 var eraserEnabled = false;
 eraser.onclick = function(e){
     eraserEnabled = true;
-    actions.className = "actions x";
+    eraser.classList.add('active');
+    pen.classList.remove('active');
 }
 
-brush.onclick = function(e){
+pen.onclick = function(e){
     eraserEnabled = false;
-    actions.className = "actions"
+    pen.classList.add('active');
+    eraser.classList.remove('active');
+}
+
+red.onclick = function(e){
+    ctx.fillStyle = "red";
+    ctx.strokeStyle = "red";
+    red.classList.add('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+}
+
+green.onclick = function(e){
+    ctx.fillStyle = "green";
+    ctx.strokeStyle = "green";
+    red.classList.remove('active');
+    green.classList.add('active');
+    blue.classList.remove('active');
+}
+
+blue.onclick = function(e){
+    ctx.fillStyle = "blue";
+    ctx.strokeStyle = "blue";
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.add('active');
 }
 
 

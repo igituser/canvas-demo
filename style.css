@@ -1,27 +1,65 @@
 *{
     margin:0;
+    padding:0;
 }
 
-#actions > button{
+ul, ol{
+    list-style:none;
+}
+
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+#actions {
     position:fixed;
     left:0;
-    bottom:0;
+    top:0;
+    padding:20px;
 }
 
-.actions.x #brush{
-    display:inline-block;
+#actions svg {
+    width:2em;
+    height:2em;
+    margin:0 8px;
+    transition:all .3s;
 }
 
-.actions.x #eraser{
-    display:none;
+#actions svg.active{
+    fill:red;
+    transform:scale(1.2);
+
 }
 
-.actions #brush{
-    display:none;
+.colors {
+    position:fixed;
+    top:60px;
+    left:30px;
+
 }
 
-.actions #eraser{
-    display:inline-block;
+.colors li{
+    width:20px;
+    height:20px;
+    border:2px solid rgba(0,0,0,0);
+    border-radius:50%;
+    margin:10px 0;
+
 }
 
+.colors li.red{
+    background-color:red;
+}
+.colors li.green{
+    background-color:green;
+}
+.colors li.blue{
+    background-color:blue;
+}
 
+.colors li.active {
+    border:2px dotted #333; 
+}
