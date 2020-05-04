@@ -1,5 +1,6 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+var lineWidth = 5;
 
 autoSetCanvasSize();
 listenToUser();
@@ -40,6 +41,21 @@ blue.onclick = function(e){
     red.classList.remove('active');
     green.classList.remove('active');
     blue.classList.add('active');
+}
+
+thin.onclick = function(e){
+    ctx.lineWidth = 5;
+}
+
+thick.onclick = function(e){
+    ctx.lineWidth = 10;
+}
+
+clear.onclick = function(e){
+    var width = document.documentElement.clientWidth;
+    var height = document.documentElement.clientHeight;
+    ctx.clearRect(0, 0, width, height);
+
 }
 
 

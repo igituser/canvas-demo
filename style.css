@@ -67,3 +67,25 @@ ul, ol{
 .colors li.active {
     border:2px dotted #333; 
 }
+
+.sizes {
+    position:fixed;
+    top:5px;
+    right:10px;
+}
+
+.sizes li{
+    margin:20px 0;
+}
+
+.sizes .thin{
+    width:35px;
+    height:3px;
+    background-color:#666;
+}
+
+.sizes .thick{
+    width:35px;
+    height:10px;
+    background-color:#666;
+}
