@@ -58,6 +58,18 @@ clear.onclick = function(e){
 
 }
 
+download.onclick = function(e){
+    //必须是canvas的元素对象才行，ctx是不行的
+    var urlData = document.getElementById('canvas').toDataURL('image/png');
+    var ele_a = document.createElement('a')
+    document.body.appendChild(ele_a)
+    ele_a.href = urlData;
+    ele_a.download = 'DCIM_';
+    ele_a.target = "_blank"
+    ele_a.click();
+    
+}
+
 
 function autoSetCanvasSize(){
     setCanvasSize();
